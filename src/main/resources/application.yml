@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://valgyklaserver.database.windows.net:1433;database=valgyklaDatabasa;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: marsav4
+    password: Markaremarka183183
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.SQL.Server2012Dialect
+
+server:
+  port: 9090
