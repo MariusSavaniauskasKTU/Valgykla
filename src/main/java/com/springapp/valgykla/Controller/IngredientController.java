@@ -3,6 +3,7 @@ package com.springapp.valgykla.Controller;
 import com.springapp.valgykla.Model.Ingredient;
 import com.springapp.valgykla.Service.IngredientService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -55,6 +56,7 @@ public class IngredientController {
     }
 
     @GetMapping()
+    @PreAuthorize("hasAuthority('worker:read')")
     public List<Ingredient> getAll()
     {
         return ingredientService.getAll();
