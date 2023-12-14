@@ -24,6 +24,12 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
+      - name: Build React
+        run: |
+          cd valgyklafrontend
+          npm install
+          npm run build
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
