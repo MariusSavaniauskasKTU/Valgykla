@@ -32,7 +32,7 @@ public class SecurityConfiguration {
                 .csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/api/vi/auth/**")
+                .requestMatchers("/api/vi/auth/**", "/static/**")
                 .permitAll()
                 //.requestMatchers("/meniu/**").hasAnyRole(ADMIN.name() ,WORKER.name())
                 //.requestMatchers("/ingredient/**").hasAnyRole(ADMIN.name() ,WORKER.name())
