@@ -19,6 +19,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/meniu")
+@CrossOrigin
 public class MeniuController {
 
     @Autowired
@@ -61,8 +62,8 @@ public class MeniuController {
         return meniuService.getAll();
     }
 
-    @GetMapping("/{id}/ingredients")
-    public List<Dish> getIngredients(@PathVariable("id") int id) {
+    @GetMapping("/{id}/dishes")
+    public List<Dish> getDishes(@PathVariable("id") int id) {
         Optional<Meniu> optionalMeniu = meniuService.findById(id);
 
         if (optionalMeniu.isEmpty()) {

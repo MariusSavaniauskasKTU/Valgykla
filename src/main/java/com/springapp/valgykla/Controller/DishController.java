@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/dish")
+@CrossOrigin
 public class DishController {
 
     @Autowired
